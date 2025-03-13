@@ -237,9 +237,28 @@ a.resume-link {
 
 
 @media print {
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+  @page {
+    margin: 15mm 10mm;
+  }
+
+  body {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: white !important;
+  }
+
+  body > :not(.resume-wrapper) {
+    display: none !important;
+  }
+
+  .resume-wrapper {
+    border: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    height: auto !important;
+    page-break-after: auto !important;
   }
 }
 .resume-wrapper {
