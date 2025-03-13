@@ -254,12 +254,9 @@ a.resume-link {
 }
 
 @media screen {
-  .resume-section {
-    min-height: 297mm;
-    padding-bottom: 5mm;
-    &:not(:last-child) {
-      border-bottom: 1px solid $theme-border-color;
-    }
+  .resume-section:not(:last-child) {
+    border-bottom: 2px solid $theme-color-primary;
+    margin-bottom: 5mm;
   }
 }
     
