@@ -141,44 +141,19 @@ a.resume-link {
 .resume-intro {
 	font-size: 0.875rem;
 }
-/*************************** Print Styles ****************************/
-@media print {
-  @page {
-    size: A4 portrait;
-    margin: 15mm 10mm;
-  }
-
-  body {
-    width: 210mm;
-    height: 297mm;
-    margin: 0;
-    padding: 0;
-    background: white !important;
-  }
-
-  .resume-wrapper {
-    box-shadow: none;
-    border: none;
-    page-break-inside: avoid;
-  }
-
-  .resume-section-heading {
-    page-break-after: avoid;
-  }
-
-  .resume-main {
-    page-break-before: auto;
-    page-break-after: always;
-  }
-
-  .resume-aside {
-    page-break-before: always;
-  }
-
-  a[href]::after {
-    content: none !important;
-  }
+.resume-main {
+	.item-title {
+		font-size: 1rem;
+	}
+	
+   .item-meta {
+	   font-size: 0.75rem;
+   }
+   .item-content {
+		font-size: 0.875rem;
+	}
 }
+
 .resume-aside {
 	border-left: 1px solid rgba(0, 0, 0, 0.08);
 	.item {
@@ -227,56 +202,6 @@ a.resume-link {
 	.resume-contact {
 	    border-left: 0;
     }
-}
-    
-
-
-
-
-
-
-
-@media print {
-  @page {
-    margin: 15mm 10mm;
-  }
-
-  body {
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    background: white !important;
-  }
-
-  body > :not(.resume-wrapper) {
-    display: none !important;
-  }
-
-  .resume-wrapper {
-    border: none !important;
-    box-shadow: none !important;
-    width: 100% !important;
-    height: auto !important;
-    page-break-after: auto !important;
-  }
-}
-.resume-wrapper {
-  height: 297mm;
-  overflow-y: auto;
-  page-break-after: always;
-  border-bottom: 1px solid $theme-text-color-primary;
-}
-
-.resume-section {
-  page-break-inside: avoid;
-}
-
-@media screen {
-  .resume-section:not(:last-child) {
-    border-bottom: 2px solid $theme-color-primary;
-    margin-bottom: 5mm;
-  }
 }
     
 
